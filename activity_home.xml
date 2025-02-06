@@ -1,0 +1,144 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C3E2EB"
+    tools:context=".HomeActivity">
+
+    <!-- AppBar/Menu at the Top -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/menu_bar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:elevation="4dp"
+        android:background="#3290F4"
+        app:menu="@menu/menu_dashboard"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- App Name: Health Locator -->
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Health Locator"
+            android:textColor="#FBF9F9"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="25dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_health_locator_logo"
+        app:layout_constraintTop_toBottomOf="@id/menu_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp" />
+
+    <!-- User Login Info -->
+    <TextView
+        android:id="@+id/user_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi, [USERNAME]"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#3361D9"
+        app:layout_constraintTop_toBottomOf="@id/page_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- Buttons Section -->
+    <LinearLayout
+        android:id="@+id/login_form"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_white_background"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@id/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_info"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Map Button -->
+        <Button
+            android:id="@+id/map_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_rounded"
+            android:gravity="center"
+            android:text="View Map"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+        <!-- User Check-in Button -->
+        <Button
+            android:id="@+id/checkin_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_rounded"
+            android:gravity="center"
+            android:text="User Check-In"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+        <!-- About Button -->
+        <Button
+            android:id="@+id/about_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_rounded"
+            android:gravity="center"
+            android:text="About"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+        <!-- Profile Button -->
+        <Button
+            android:id="@+id/profile_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_rounded"
+            android:gravity="center"
+            android:text="Profile"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
